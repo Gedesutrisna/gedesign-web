@@ -524,6 +524,10 @@ footer {
     background-color: var(--black-color);
 }
 
+footer .container {
+    padding: 80px 80px 20px 80px;
+}
+
 /* Card Styles */
 .card {
     background-color: var(--white-color);
