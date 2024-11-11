@@ -66,3 +66,43 @@ document.querySelectorAll('.faq').forEach(item => {
         });
     });
 });
+
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Counter function to animate from 0 to target value
+function animateCounter(counter) {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+    const increment = target / 100; // Adjust this value to control speed
+
+    const updateCounter = () => {
+        count += increment;
+        if (count < target) {
+            counter.innerText = Math.ceil(count) + '+'; // Update text with +
+            requestAnimationFrame(updateCounter);
+        } else {
+            counter.innerText = target + '+'; // Ensure final target shows +
+        }
+    };
+    updateCounter();
+}
+
+// Event listener for scrolling
+window.addEventListener('scroll', () => {
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        if (isInViewport(counter) && !counter.classList.contains('animated')) {
+            counter.classList.add('animated'); // To prevent re-triggering
+            animateCounter(counter);
+        }
+    });
+});
