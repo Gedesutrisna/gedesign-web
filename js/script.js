@@ -22,6 +22,10 @@ var swipers = [
                 spaceBetween: 10,
             },
             768: {
+                slidesPerView: 2,
+                spaceBetween: 10,
+            },
+            1028: {
                 slidesPerView: 3,
                 spaceBetween: 16,
             }

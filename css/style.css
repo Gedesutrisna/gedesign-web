@@ -589,10 +589,15 @@ footer {
 @media (max-width: 688px) { 
 
     section {
-        margin-bottom: 100px;
+        margin-bottom: 80px;
     }
     section.hero {
         margin-top: 100px;
+    }
+    .container-footer {
+        border-radius: 0px 0px 20px 20px;
+        margin-bottom: 1rem;
+        padding: 10px;
     }
     .container {
         padding: 1rem !important;
@@ -724,14 +729,23 @@ footer {
 
 }
 @media (min-width: 689px) and (max-width: 1200px) {
-
+    .container-footer {
+        border-radius: 0px 0px 20px 20px;
+        margin-bottom: 1rem;
+        padding: 10px;
+    }
     .container {
         padding: 1rem !important;
     }
     section.hero {
         margin-top: 60px;
     }
-
+    h1.title-custom {
+        color: var(--black-color);
+        font-size: calc(var(--font-size-h1) * .7); /* Skala sekitar 70% */
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
     h1.title-hero {
         font-size: calc(var(--font-size-h1) * .7); /* Skala sekitar 70% */
     }
@@ -740,11 +754,19 @@ footer {
         font-size: calc(var(--font-size-h2) * 0.7); /* Skala sekitar 70% */
     }
 
+    .card-title-large {
+        font-size: calc(var(--font-size-h3) * .9); /* Skala sekitar 70% */
+    }
+
     p.text {
         font-size: calc(var(--font-size-p-medium) * 0.9); /* Skala sekitar 90% */
         line-height: 1.4; /* Menyesuaikan jarak baris pada ukuran mobile */
     }
 
+    .card-img-main {
+        height: 270px;
+    }
+    
     nav .container {
         padding: 0px 1rem !important;
     }
@@ -808,7 +830,9 @@ footer {
     .gap-md {
         gap: 10px !important;
     }
-
+    .gap-md-small{
+        gap: .5rem !important;
+    }
     .grid {
         display: grid;
         gap: .5rem;
