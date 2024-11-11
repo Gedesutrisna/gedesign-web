@@ -534,6 +534,12 @@ footer .container {
     border: 1px solid var(--border-color-primary);
     border-radius: var(--border-radius-small);
     padding: 18px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    background-color: var(--light-primary-color); /* Optional light primary background */
+    border: 1px solid var(--primary-color); /* Changes border color */
 }
 
 .card-img-main {
